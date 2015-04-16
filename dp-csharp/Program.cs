@@ -31,7 +31,8 @@ namespace DpCSharp
 
         static void Main(string[] args)
         {
-            testRetry();
+            long time = TimeMeasurer.ElapsedMilliseconds(() => testRetry());
+            Console.WriteLine("ElapsedMilliseconds: {0}ms", time);
         }
     }
 }
